@@ -1,0 +1,1070 @@
+Prime no:
+*******************************************************************************/
+
+public class Main
+{
+    public static String isPrime(int n)
+    {
+        int count=0;
+        for (int i=2;i<=Math.sqrt(n);i++)
+        {
+            if(n%i==0)
+            count++;
+        }
+        String result=(count==0?"prime":"not prime");
+        return result;
+        
+    }
+	public static void main(String[] args) {
+		System.out.println(isPrime(21));
+		
+	}
+}
+
+
+----------------------------------------------------------------------------
+Reverse number
+
+*******************************************************************************/
+
+public class Main
+{
+    public static int Reverse(int n)
+    {
+         int remainder=0;
+         int reverse=0;
+         while(n!=0)
+         {
+             remainder=n%10;
+             reverse=reverse*10+remainder;
+             n=n/10;
+         }
+         return reverse;
+        
+    }
+	public static void main(String[] args) {
+		System.out.println(Reverse(125));
+		
+	}
+}
+*******************************************************************************/
+Factorial num
+*******************************************************************************/
+
+public class Main
+{
+    public static long Factorial(int n)
+    {
+         if(n==0)
+         {
+             return 1;
+         }
+         return (n*Factorial(n-1));
+        
+    }
+	public static void main(String[] args) {
+		System.out.println(Factorial(10));
+		
+	}
+}
+
+*******************************************************************************/
+number palindrome
+*******************************************************************************/
+public class Main
+{
+    public static int Reverse(int n)
+    {
+         int remainder=0;
+         int reverse=0;
+         while(n!=0)
+         {
+             remainder=n%10;
+             reverse=reverse*10+remainder;
+             n=n/10;
+         }
+         return reverse;
+        
+    }
+	public static void main(String[] args) {
+	    int n=121;
+	    String result=(n==Reverse(n)?"Palindrome":"not palindrome");
+		System.out.println(result);
+		
+	}
+}
+*******************************************************************************/
+fibbonaci series  first term 1
+*******************************************************************************/
+public class Main
+{
+    public static int fibbo(int n)
+    {
+        if(n<=1)
+        {
+            return n;
+        }
+        
+          
+        return(fibbo(n-1)+fibbo(n-2));
+        
+    }
+	public static void main(String[] args) {
+	    int n=10;
+	    for (int i=1; i<=n;i++)
+	    {
+		System.out.print(fibbo(i)+" ");
+	    }
+	}
+}
+*******************************************************************************/
+Reverse String
+*******************************************************************************/
+public class Main
+{
+    public static String reverse(String n)
+    {
+         String rev="";
+         for(int i=n.length()-1;i>=0;i--)
+         {
+             rev=rev+n.charAt(i);
+         }
+         return rev;
+    }
+	public static void main(String[] args) {
+	     
+		System.out.print(reverse("kalpesh"));
+	  
+	}
+}
+*******************************************************************************/
+String palindrome
+*******************************************************************************/
+public class Main
+{
+    public static String reverse(String n)
+    {
+         String rev="";
+         for(int i=n.length()-1;i>=0;i--)
+         {
+             rev=rev+n.charAt(i);
+         }
+         return rev;
+    }
+	public static void main(String[] args) {
+	    
+	    String k="nitin";
+	    String result=(k.equals(reverse(k))?"palindrome":"not palindrome");
+	     
+		System.out.print(result);
+	  
+	}
+}
+*******************************************************************************/
+reverse a string without using string function
+*******************************************************************************/
+public class Main
+{
+    
+	public static void main(String[] args) {
+	    
+	    String k="Radha";
+	    StringBuilder sb=new StringBuilder(k);
+	    sb.reverse();
+	     
+		System.out.print(sb);
+	  
+	}
+}
+*******************************************************************************/
+Sort a array
+
+*******************************************************************************/
+import java.util.*;
+
+public class Main
+{
+    
+	public static void main(String[] args) {
+	    
+	   int [] arr={4,7,9,15,2};
+	   Arrays.sort(arr);
+	 
+	   System.out.println(  Arrays.toString(arr));
+	   
+	   
+	}
+}
+*******************************************************************************/
+Swap two number without third
+
+*******************************************************************************/
+
+
+public class Main
+{
+
+  public static void main (String[]args)
+  {
+
+    int a = 25;
+    int b = 36;
+      a = a + b;
+      b = a - b;
+      a = a - b;
+
+      System.out.println ("A= " + a + " b= " + b);
+
+
+  }
+}
+
+*******************************************************************************/
+inheritance
+*******************************************************************************/
+class Animal
+{
+  public void show ()
+  {
+    System.out.println ("this is parent");
+  }
+}
+class Dog extends Animal
+{
+  public void leg ()
+  {
+    System.out.println ("it has 4 legs");
+  }
+}
+
+public class Main
+{
+
+  public static void main (String[]args)
+  {
+
+    Dog d = new Dog ();
+      d.show ();
+      d.leg ();
+
+
+  }
+}
+
+*******************************************************************************/
+Encapsulation
+
+*******************************************************************************/
+class Fruit
+{
+  private int price;
+  private String name;
+  private String colour;
+  
+  public void setColour(String colour)
+  {
+      this.colour=colour;
+  }
+  public String getColour ()
+  {
+    return this.colour;
+  }
+    public void setName(String name)
+  {
+      this.name=name;
+  }
+  public String getName ()
+  {
+    return this.name;
+  }  
+  public void setPrice(int price)
+  {
+      this.price=price;
+  }
+  public int getPrice ()
+  {
+    return this.price;
+  }
+}
+ 
+
+public class Main
+{
+
+  public static void main (String[]args)
+  {
+
+     Fruit f=new Fruit();
+     f.setPrice(300);
+     f.setName("apple");
+     f.setColour("red");
+     System.out.println(f.getPrice()+" "+f.getName()+" "+f.getColour());
+
+  }
+}
+
+output-
+name of fruit apple
+price of fruit 100
+colour is red
+
+
+*******************************************************************************/
+polymorphism compiletimepoly (methodoverload)
+*******************************************************************************/
+class Demo
+{
+  //method overload
+  public void sum (int a, int b)
+  {
+    System.out.println ("sum is " + (a + b));
+
+  }
+  public void sum (int a, int b, int c)
+  {
+    System.out.println ("sum is " + (a + b + c));
+  }
+
+}
+
+
+public class Main
+{
+
+  public static void main (String[]args)
+  {
+    Demo d = new Demo ();
+      d.sum (10, 20);
+      d.sum (10, 45, 98);
+
+  }
+}
+
+sum is 30
+sum is 153
+
+*******************************************************************************/
+polymorphism runtime method override
+*******************************************************************************/
+class Flower
+{
+  //method override
+  public void name ()
+  {
+    System.out.println ("Flower name is Flower");
+
+  }
+
+
+}
+class Lotus extends Flower
+{
+  public void name ()
+  {
+    System.out.println ("Flower name is Lotus");
+
+  }
+}
+
+
+public class Main
+{
+
+  public static void main (String[]args)
+  {
+    Lotus l = new Lotus ();
+      l.name ();
+
+  }
+}
+
+
+Flower name is Lotus
+*******************************************************************************/
+Abstraction 
+ 
+*******************************************************************************/
+abstract class  Fruit
+{
+  public abstract void name(String name);
+  public abstract void price(int no);
+  public void colour()
+  {
+      System.out.println("colour is red");
+      
+  }
+}
+ 
+class Apple extends Fruit
+{
+    public void name(String name)
+    {
+        System.out.println("name of fruit "+name);
+    }
+    public void price(int no)
+    {
+         System.out.println("price of fruit "+no);
+    }
+}
+public class Main
+{
+
+  public static void main (String[]args)
+  {
+
+     Apple f=new Apple();
+     f.name("apple");
+     f.price(100);
+     f.colour();
+    
+
+  }
+}
+
+output:
+name of fruit apple
+price of fruit 100
+colour is red
+*******************************************************************************/
+Armstrong no
+*******************************************************************************/
+
+
+
+public class Main
+{
+  public static int isarmstrong (int n)
+  {
+    int last = 0, temp, digit = 0, sum = 0;
+      temp = n;
+    while (temp > 0)
+      {
+	//count digit first
+	temp = temp / 10;
+	digit++;
+
+      }
+    temp = n;
+    while (temp > 0)
+      {
+	//finding each ele
+	last = temp % 10;
+	//taking pow of each and adding to sum
+	sum += (Math.pow (last, digit));
+
+
+	temp = temp / 10;
+
+      }
+    return sum;
+  }
+  public static void main (String[]args)
+  {
+    int n = 153;
+    String res = ((isarmstrong (n) == n) ? "armstrong" : "not armstrong");
+    System.out.println (res);
+
+
+  }
+}
+
+*******************************************************************************/
+armstrong number under 1000
+*******************************************************************************/
+
+
+
+public class Main
+{
+  public static int isarmstrong (int n)
+  {
+    int last = 0, temp, digit = 0, sum = 0;
+      temp = n;
+    while (temp > 0)
+      {
+	//count digit first
+	temp = temp / 10;
+	digit++;
+
+      }
+    temp = n;
+    while (temp > 0)
+      {
+	//finding each ele
+	last = temp % 10;
+	//taking pow of each and adding to sum
+	sum += (Math.pow (last, digit));
+
+
+	temp = temp / 10;
+
+      }
+    return sum;
+  }
+  public static void main (String[]args)
+  {
+    for (int i = 0; i < 1000; i++)
+      {
+	if (i == isarmstrong (i))
+	  System.out.print (i + " ");
+
+      }
+
+
+  }
+}
+
+*******************************************************************************/
+Objects are equal or not
+*******************************************************************************/
+
+
+
+public class Main
+{
+
+  public static void main (String[]args)
+  {
+    Float i = new Float (15);
+    Double k = new Double (20.4);
+
+      System.out.println (i.equals (k));
+      System.out.print (k.equals (20.4));
+
+
+
+  }
+}
+
+output:
+False
+True
+*******************************************************************************/
+Star pattern
+
+*******************************************************************************/
+
+
+
+public class Main
+{
+
+  public static void main (String[]args)
+  {
+   for(int i=0;i<5;i++)
+   {
+       for(int j=0;j<=i;j++)
+       {
+            System.out.print("* ");
+       }
+       System.out.println();
+   }
+  }
+}
+
+
+output:
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+
+
+
+*******************************************************************************/
+no swapping using bitwise
+
+*******************************************************************************/
+ 
+public class Main
+{
+
+  public static void main (String[]args)
+  {
+    int a = 24;
+    int b = 46;
+      a = a ^ b;
+      b = a ^ b;
+      a = a ^ b;
+      System.out.println ("a= " + a + " " + "b= " + b);
+  }
+}
+
+*******************************************************************************/
+sum of first n natural no
+
+*******************************************************************************/
+ 
+public class Main
+{
+
+  public static void main (String[]args)
+  {
+      int n=100;
+    System.out.println((n*(n+1))/2);
+  }
+}
+
+*******************************************************************************/
+largets no from three numbers
+
+*******************************************************************************/
+ 
+public class Main
+{
+
+  public static void main (String[]args)
+  {
+      int n=1400;
+      int k=140;
+      int j=1342;
+      int m=((n>k?n:k)>j?(n>k?n:k):j);
+      System.out.println(m);
+   
+  }
+}
+
+*******************************************************************************/
+count no of occurance in array using hashmap
+
+*******************************************************************************/
+import java.util.*;
+public class Main
+{
+
+  public static void main (String[]args)
+  {
+    int[] arr = { 10, 2, 4, 3, 5, 2, 4, 1, 3, 5, 2, 4 };
+    HashMap < Integer, Integer > hm = new HashMap < Integer, Integer > ();
+
+    for (int i = 0; i < arr.length; i++)
+      {
+	if (hm.containsKey (arr[i]))
+	  {
+	    hm.put (arr[i], hm.get (arr[i]) + 1);
+
+	  }
+	else
+	  {
+	    hm.put (arr[i], 1);
+	  }
+      }
+
+    System.out.println (hm);
+  for (Map.Entry < Integer, Integer > mp:hm.entrySet ())
+      {
+	System.out.print (mp.getKey () + " - " + mp.getValue () + " | ");
+      }
+
+  }
+}
+
+Output:
+{1=1, 2=3, 3=2, 4=3, 5=2, 10=1}
+1 - 1 | 2 - 3 | 3 - 2 | 4 - 3 | 5 - 2 | 10 - 1 | 
+*******************************************************************************/
+Left rotate array
+
+*******************************************************************************/
+
+public class Main
+{
+
+  public static void main (String[]args)
+  {
+    int[] arr = { 1, 2, 3, 4, 5, 6 };
+    int n = 4; //no of rotation
+    int j, first;
+    //repeat upto n
+    for (int i = 0; i < n; i++)
+      {
+	//storing first element
+	first = arr[0];
+	//perform rotation in single time
+	for (j = 0; j < arr.length - 1; j++)
+	  {
+	    //assign next element to currnt
+	    arr[j] = arr[j + 1];
+	  }
+	//assign first ele to last
+	arr[j] = first;
+
+      for (int k:arr)
+	  {
+	    System.out.print (k + " ");
+	  }
+	System.out.println ();
+      }
+    System.out.println ("After complete");
+
+  for (int k:arr)
+      {
+	System.out.print (k + " ");
+      }
+  }
+}
+
+
+output:
+2 3 4 5 6 1 
+3 4 5 6 1 2 
+4 5 6 1 2 3 
+5 6 1 2 3 4 
+After complete
+5 6 1 2 3 4 
+*******************************************************************************/
+Duplicate no in array
+*******************************************************************************/
+import java.util.*;
+
+public class Main
+{
+
+  public static void main (String[]args)
+  {
+    int[] arr = { 1, 2, 3, 4, 5, 6,4,6,1,3,5 };
+    HashMap <Integer,Integer> hm=new HashMap<>();
+    for(int k:arr)
+    {
+        if(hm.containsKey(k))
+        {
+            System.out.print(k+" ");
+        }
+        hm.put(k,1);
+    }
+ 
+  }
+}
+
+*******************************************************************************/
+right rotate array
+*******************************************************************************/
+ 
+public class Main
+{
+
+  public static void main (String[]args)
+  {
+    int[] arr = { 1, 2, 3, 4, 5, 6 };
+    int n=3;
+    int last;
+    for(int i=0;i<n;i++)
+    {
+        last=arr[arr.length-1];
+        for(int j=arr.length-1;j>0;j--)
+        {
+            arr[j]=arr[j-1];
+        }
+        arr[0]=last;
+        
+    }
+    
+    for(int k:arr)
+    {
+        System.out.print(k+" ");
+    }
+ 
+  }
+}
+
+
+output:
+4 5 6 1 2 3 
+*******************************************************************************/
+Secooond largest ele of array
+
+*******************************************************************************/
+ import java.util.Arrays;
+public class Main
+{
+
+  public static void main (String[]args)
+  {
+    int[] arr = { 14,94,25,78,36,14,52 };
+    Arrays.sort(arr);
+    System.out.println(arr[arr.length-2]);
+    
+  }
+}
+
+output:
+78
+*******************************************************************************/
+NO of charecters in string 
+*******************************************************************************/
+
+public class Main
+{
+	public static void main(String[] args) {
+	    String k="Welcome to cdac banglore";
+	    int count=0;
+	    for(int i=0;i<k.length();i++)
+	    {
+	        if(k.charAt(i)!=' ')
+	        {
+	            count++;
+	        }
+	    }
+		System.out.println(count);
+	}
+}
+
+output:
+21
+*******************************************************************************/
+Strings are anagram or not
+*******************************************************************************/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    String k="Devin";
+	    String h="Nivel";
+	    k=k.toLowerCase();
+	    h=h.toLowerCase();
+	    char [] ka=k.toCharArray();
+	    char [] ha=h.toCharArray();
+	    Arrays.sort(ka);
+	    Arrays.sort(ha);
+	    if(ka.length!=ha.length)
+	    {
+	        System.out.println("not anagram");
+	    }
+	    else if(Arrays.equals(ka,ha))
+	    {
+	        System.out.println("Anagram");
+	    }
+	    else
+	    System.out.println("not anagram");
+	    
+	  
+	}
+}
+
+output:
+not anagram
+*******************************************************************************/
+substrings of strings
+*******************************************************************************/
+
+public class Main
+{
+  public static void main (String[]args)
+  {
+    String n = "Radha";
+    int temp = 0;
+    int len = n.length ();
+    //total combination n=n+(n+1)/2
+      String[] arr = new String[len * (len + 1) / 2];
+    for (int i = 0; i < len; i++)
+      {
+	for (int j = i; j < len; j++)
+	  {
+	    arr[temp] = n.substring (i, j + 1);
+	    temp++;
+	  }
+      }
+    for (String k:arr)
+      {
+	System.out.print (k + " ");
+      }
+  }
+}
+
+output:
+R Ra Rad Radh Radha a ad adh adha d dh dha h ha a 
+*******************************************************************************/
+lowercase to uppercase and vice verca
+*******************************************************************************/
+//lowercase to uppercase and vice verca
+public class Main
+{
+  public static void main (String[]args)
+  {
+     String j="HaRiSh Is VeRy GoOd GuY";
+     StringBuffer sb=new StringBuffer(j);
+     for(int i=0;i<j.length();i++)
+     {
+         if(Character.isLowerCase(j.charAt(i)))
+         {
+             sb.setCharAt(i,Character.toUpperCase(j.charAt(i)));
+             
+         }
+         else if(Character.isUpperCase(j.charAt(i)))
+         {
+             sb.setCharAt(i,Character.toLowerCase(j.charAt(i)));
+         }
+     }
+     System.out.println(sb);
+  }
+}
+
+
+output:
+hArIsH iS vErY gOoD gUy
+
+*******************************************************************************/
+Reverse the string
+
+*******************************************************************************/
+//reverse the string
+public class Main
+{
+  public static void main (String[]args)
+  {
+     String j="HaRiSh Is VeRy GoOd GuY";
+      String rev="";
+     for(int i=j.length()-1;i>=0;i--)
+     {
+         rev=rev+j.charAt(i);
+     }
+     System.out.println(rev);
+  }
+}
+
+
+output:
+YuG dOoG yReV sI hSiRaH
+*******************************************************************************/
+String reverse with function
+*******************************************************************************/
+//reverse the string
+public class Main
+{
+  public static void main (String[]args)
+  {
+     String j="HaRiSh Is VeRy GoOd GuY";
+       StringBuilder rev=new StringBuilder(j); 
+      System.out.println(rev.reverse());
+  }
+}
+*******************************************************************************/
+Buuble sort
+*******************************************************************************/
+*******************************************************************************/
+//bubble sort   sending biggest element to last by comparing adjacent element
+public class Main
+{
+  public static void main (String[]args)
+  {
+   int []arr={64,11,74,94,32};
+    
+   for(int i=0;i<arr.length-1;i++)
+   {
+      
+     
+       for(int j=0;j<arr.length-i-1;j++)
+       {
+           
+           if(arr[j]>arr[j+1])  //compare adjacent items of array
+           {
+                
+               int temp=arr[j];
+               arr[j]=arr[j+1]; 
+               arr[j+1]=temp;
+                
+           }
+       }
+       for (int k=0;k<arr.length;k++)
+				{
+					System.out.print( arr[k]+" ");
+				}
+				System.out.println();
+   }
+   System.out.println("final output:");
+   for(int k:arr)
+   {
+       System.out.print(k+" ");
+   }
+  }
+}
+
+
+Output:
+11 64 74 32 94 
+11 64 32 74 94 
+11 32 64 74 94 
+11 32 64 74 94 
+final output:
+11 32 64 74 94 
+*******************************************************************************/
+Selection : select small and swap
+
+*******************************************************************************/
+//selection  sort   select small element from array wrt one and swap them
+public class Main
+{
+  public static void main (String[]args)
+  {
+    int[] arr = { 15, 64, 35, 18, 98, 41 };
+    for (int i = 0; i < arr.length - 1; i++)
+      {
+	int min = i;  //let ith is min
+	for (int j = i + 1; j < arr.length; j++)
+	  {
+	    if (arr[min] > arr[j])  //check less than ith
+	      {
+
+		int temp = arr[min];        //swap them
+		arr[min] = arr[j];
+		arr[j] = temp;
+	      }
+	  }
+      }
+  for (int k:arr)
+      {
+	System.out.print (k + " ");
+      }
+  }
+}
+
+
+output:
+15 18 35 41 64 98 
+
+*******************************************************************************/
+insertion sort : start from 1st and insert it in its position in sorted 
+
+*******************************************************************************/
+//insertion sort start from first index and track sorted from i-1 and put ith ele at correct pos
+public class Main
+{
+  public static void main (String[]args)
+  {
+    int[] arr = { 15, 64, 35, 18, 98, 41 };
+    for (int i = 1; i < arr.length; i++)
+      {
+	int curr = arr[i];	//track ith element
+	int j = i - 1;		//unsorted array from i-1
+	while (j >= 0 && arr[j] > curr)	//if curr ele is less than last ele of sorted
+	  {
+	    arr[j + 1] = arr[j];	//displace ele by 1 place until j>curr
+	    j--;		//decrement j
+	  }
+	arr[j + 1] = curr;	//place curr at curr j+1 index
+      for (int k:arr)
+	  {
+	    System.out.print (k + " ");
+	  }
+	System.out.println ();
+      }
+  for (int k:arr)
+      {
+	System.out.print (k + " ");
+      }
+  }
+}
+
+
+Output:
+15 64 35 18 98 41 
+15 35 64 18 98 41 
+15 18 35 64 98 41 
+15 18 35 64 98 41 
+15 18 35 41 64 98 
+15 18 35 41 64 98 
+
+*******************************************************************************/
+Merge sorrt
+*******************************************************************************/
